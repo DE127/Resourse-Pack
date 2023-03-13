@@ -1,0 +1,34 @@
+{
+   "action": {
+      "default_icon": "img/logo16.png",
+      "default_title": "Click to Run CSS Scanner"
+   },
+   "background": {
+      "service_worker": "js/background.js"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "css/cssviewer.css" ],
+      "js": [ "js/cssviewer.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "description": "The simplest css property viewer.",
+   "host_permissions": [ "http://*/*", "https://*/*", "file://*/*", "file://*/*" ],
+   "icons": {
+      "16": "img/logo16.png",
+      "24": "img/logo24.png",
+      "32": "img/logo32.png",
+      "48": "img/logo48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvlhGY4ORDgzssq9XM7TaBK/m836toDwPec7/522/qVpMZJl7/zHnzB/bElYc/66ST1fn++4R4qMFGbh1anawgN8YF0Yk/gZMeWfd8UdAH9TTjwiMlHdvTSjDOye1dKUSl++Zbk0JX5WwhNYhM80jpCipR8PIJUEf4killF8XbQetslZgNy30czHNLp4/amUuhfDzFfiO+zPxEYxdM7cdD+33yZ/kyzwae5EAJFqAWNvg2/5635XQSC96D6B2GvZeQTGgXbtQ7RICOC29vECKUp5vC9Wjrpswwtb3N9eKZpXWlQ1cvK1PwQM1L88MsCEK3d4gS0nN/0CrQr77d4Xq9wIDAQAB",
+   "manifest_version": 3,
+   "name": "CSS Scanner",
+   "permissions": [ "tabs", "contextMenus", "storage", "scripting" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.0",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "img/trash.svg", "img/copy.svg", "img/code.svg", "img/size.svg", "img/font.svg", "img/close.svg", "img/options.svg", "img/pause.svg", "img/play.svg", "img/arrow_down.svg", "img/lightning.svg", "img/logo128.png", "img/bmc-button.svg" ]
+   } ]
+}
